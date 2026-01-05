@@ -1,0 +1,275 @@
+{
+  "args": {
+    "data_dir": "D:\\Marine Data Assimilation\\MarineDLAssimilation\\data\\06",
+    "model": "cnnlstm",
+    "epochs": 5,
+    "batch_size": 2,
+    "patch_size": 64,
+    "depth_max": 10,
+    "obs_ratio": 0.02,
+    "include_vars": "thetao,so,uo,vo,zos",
+    "target_vars": "thetao,so,uo,vo,zos",
+    "lr": 0.001,
+    "device": "cuda",
+    "num_workers": 0,
+    "seed": 0,
+    "data_loss_on_obs_only": 0,
+    "per_channel_mask": 0,
+    "ignore_invalid": 1,
+    "phys_geo": 0.0,
+    "phys_advdiff": 0.0,
+    "phys_kappa": 10.0,
+    "pinn_backbone": "unet"
+  },
+  "channel_meta": {
+    "include_vars": [
+      "thetao",
+      "so",
+      "uo",
+      "vo",
+      "zos"
+    ],
+    "target_vars": [
+      "thetao",
+      "so",
+      "uo",
+      "vo",
+      "zos"
+    ],
+    "depth_dim": "depth",
+    "lat_dim": "latitude",
+    "lon_dim": "longitude",
+    "time_dim": "time",
+    "depth_max": 10,
+    "channels": [
+      [
+        "thetao",
+        0
+      ],
+      [
+        "thetao",
+        1
+      ],
+      [
+        "thetao",
+        2
+      ],
+      [
+        "thetao",
+        3
+      ],
+      [
+        "thetao",
+        4
+      ],
+      [
+        "thetao",
+        5
+      ],
+      [
+        "thetao",
+        6
+      ],
+      [
+        "thetao",
+        7
+      ],
+      [
+        "thetao",
+        8
+      ],
+      [
+        "thetao",
+        9
+      ],
+      [
+        "so",
+        0
+      ],
+      [
+        "so",
+        1
+      ],
+      [
+        "so",
+        2
+      ],
+      [
+        "so",
+        3
+      ],
+      [
+        "so",
+        4
+      ],
+      [
+        "so",
+        5
+      ],
+      [
+        "so",
+        6
+      ],
+      [
+        "so",
+        7
+      ],
+      [
+        "so",
+        8
+      ],
+      [
+        "so",
+        9
+      ],
+      [
+        "uo",
+        0
+      ],
+      [
+        "uo",
+        1
+      ],
+      [
+        "uo",
+        2
+      ],
+      [
+        "uo",
+        3
+      ],
+      [
+        "uo",
+        4
+      ],
+      [
+        "uo",
+        5
+      ],
+      [
+        "uo",
+        6
+      ],
+      [
+        "uo",
+        7
+      ],
+      [
+        "uo",
+        8
+      ],
+      [
+        "uo",
+        9
+      ],
+      [
+        "vo",
+        0
+      ],
+      [
+        "vo",
+        1
+      ],
+      [
+        "vo",
+        2
+      ],
+      [
+        "vo",
+        3
+      ],
+      [
+        "vo",
+        4
+      ],
+      [
+        "vo",
+        5
+      ],
+      [
+        "vo",
+        6
+      ],
+      [
+        "vo",
+        7
+      ],
+      [
+        "vo",
+        8
+      ],
+      [
+        "vo",
+        9
+      ],
+      [
+        "zos",
+        null
+      ]
+    ],
+    "var_slices": {
+      "thetao": {
+        "start": 0,
+        "end": 10,
+        "ndepth": 10,
+        "is3d": 1
+      },
+      "so": {
+        "start": 10,
+        "end": 20,
+        "ndepth": 10,
+        "is3d": 1
+      },
+      "uo": {
+        "start": 20,
+        "end": 30,
+        "ndepth": 10,
+        "is3d": 1
+      },
+      "vo": {
+        "start": 30,
+        "end": 40,
+        "ndepth": 10,
+        "is3d": 1
+      },
+      "zos": {
+        "start": 40,
+        "end": 41,
+        "ndepth": 1,
+        "is3d": 0
+      }
+    }
+  },
+  "pred_slices": {
+    "thetao": {
+      "start": 0,
+      "end": 10,
+      "ndepth": 10,
+      "is3d": 1
+    },
+    "so": {
+      "start": 10,
+      "end": 20,
+      "ndepth": 10,
+      "is3d": 1
+    },
+    "uo": {
+      "start": 20,
+      "end": 30,
+      "ndepth": 10,
+      "is3d": 1
+    },
+    "vo": {
+      "start": 30,
+      "end": 40,
+      "ndepth": 10,
+      "is3d": 1
+    },
+    "zos": {
+      "start": 40,
+      "end": 41,
+      "ndepth": 1,
+      "is3d": 0
+    }
+  }
+}
